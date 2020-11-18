@@ -34,16 +34,3 @@ git checkout Pico-ST
 echo "Pico-ST"
 make -j40
 cp arm-linux-user/qemu-arm ../bin/Pico-ST
-
-
-git checkout Pico-HTM
-../configure.sh 2>&1 >/dev/null
-echo "Pico-HTM"
-make -j40
-cp arm-linux-user/qemu-arm ../bin/Pico-HTM
-
-git checkout HST-HTM
-../configure.sh 2>&1 >/dev/null
-echo "HST-HTM"
-make -j40
-cp arm-linux-user/qemu-arm ../bin/HST-HTM
