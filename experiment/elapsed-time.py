@@ -16,7 +16,7 @@ def readfile(filename):
 
 log = open('elapsed-time.csv', 'w')
 base = 'logs/'
-solutions = ['Pico-CAS', 'PST', 'HST-weak', 'HST'] #HST not complete
+solutions = ['Pico-CAS', 'Pico-ST', 'PST', 'HST', 'HST-weak'] #HST not complete
 for solution in solutions:
     thread = 1
     log.write(solution + ',')
