@@ -1,3 +1,6 @@
+cd lock-free-stack-arm-asm
+make
+cd ..
 cd QEMU-ABA
 git checkout PST
 ../configure.sh
