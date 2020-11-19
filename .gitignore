@@ -3,3 +3,4 @@
 /lock-free-stack-arm-asm/
 /experiment/logs/
 /experiment/nohup.out
+/experiment/*.csv
