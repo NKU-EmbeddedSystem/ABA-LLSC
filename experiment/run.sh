@@ -1,4 +1,5 @@
 mkdir -p logs/$1
+rm logs/$1/*.txt
 for program in blackscholes bodytrack facesim fluidanimate freqmine swaptions x264
 do
 	for thread in 1 2 4 8 16 32
