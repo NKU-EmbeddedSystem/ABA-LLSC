@@ -4,3 +4,4 @@
 /experiment/logs/
 /experiment/nohup.out
 /experiment/*.csv
+*.tar.gz
