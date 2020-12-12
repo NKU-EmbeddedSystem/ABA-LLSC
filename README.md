@@ -77,7 +77,7 @@ bash correctness.sh
 ```
 If HTM supported
 ```
-bash correctness.sh
+bash correctness-HTM.sh
 ```
 
 ### Drawing Speedup figures
