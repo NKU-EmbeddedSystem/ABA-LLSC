@@ -37,9 +37,9 @@ for name in names:
         var = line[0][1:]
         plt.plot(index, var, label=name)
     if i > 5:
-        plt.xlabel('threads', fontsize=18)
+        plt.xlabel('Threads', fontsize=18)
     if i == 2 or i == 6:
-        plt.ylabel('speed up', fontsize=18)
+        plt.ylabel('Speedup', fontsize=18)
     if i == 8:
         plt.legend(bbox_to_anchor=(1.1,1), fontsize=14)
     count += 1
