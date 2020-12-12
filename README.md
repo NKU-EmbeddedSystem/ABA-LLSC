@@ -62,7 +62,7 @@ When the scripts finish, use the following scripts to analyse the logs and gener
 ```
 python3 elapsed-time.py
 cat elapsed-time.csv
-``` 
+```
 If HTM supported
 ```
 python3 elapsed-time-HTM.py
@@ -79,3 +79,25 @@ If HTM supported
 ```
 bash correctness.sh
 ```
+
+### Drawing Speedup figures
+
+#### 1. Normalize data to speedup
+We first use `speedup.py` under `experiment` folder to normalize data to single thread execution time of Pico-CAS.
+
+```
+cd experiment
+python3 ./speedup.py
+```
+
+This generates `speedup.csv`.
+
+#### 2. Drawing figure
+
+We use `draw.py` to generate pdf file.
+```
+python3 ./draw.py
+```
+
+You should see a figure like this, called `speedup.pdf`:
+![Speedup](speedup-sample.png)
