@@ -28,7 +28,7 @@ for name in names:
     i += 1
     fig.add_subplot(num)
     plt.title(name, fontsize=18)
-    plt.xticks(fontsize=12)
+    plt.xticks(index, threads, fontsize=12)
     plt.yticks(fontsize=12)
     # empty = [0,0,0,0,0,[0
     for j in range(1, 8):
