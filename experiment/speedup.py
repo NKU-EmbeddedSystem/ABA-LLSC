@@ -1,5 +1,10 @@
+#!/usr/bin/python3
 import pathlib
 
+
+print(  "===========================\n"
+        f"Hello! Normalizing speedup to Pico-CAS single thread.\n"
+        "===========================")
 def readfile(filename):
     p = pathlib.Path(filename)
     if not p.is_file():
@@ -49,3 +54,7 @@ for name in names:
         log.write('\n')
 
 log.close()
+print(  "===========================\n"
+        f"Success! regults written to speedup.csv\n"
+        f"Please use draw.py to generate figure:)\n"
+        "===========================")

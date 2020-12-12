@@ -1,21 +1,29 @@
+#!/usr/bin/python3
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+# Configure
+fig_name = "speedup.pdf"
+data_file = "speedup.csv"
 names = ['blackscholes','bodytrack', 'facesim', 'fluidanimate', 'freqmine', 'swaptions', 'x264']
-fig = plt.figure()
-fig.subplots_adjust(left=0.05,right=0.95,bottom=0.07,top=0.93,wspace=0.1,hspace=0.15)
+fig = plt.figure(figsize=(14,7))
+fig.subplots_adjust(left=0.05,right=0.95,bottom=0.10,top=0.93,wspace=0.1,hspace=0.2)
 plt.axis('off')
 
+# Let's begin!
+print(  "===========================\n"
+        f"Hello! Generating figure using {data_file}\n"
+        "===========================")
 data = pd.read_csv('speedup.csv',header=None)
 data.drop([7],axis=1,inplace=True)
-# print(data)
 i = 1
 width = 0.21
 threads = ['1', '2', '4', '8', '16', '32']
 index = np.arange(len(threads))
 count = 0
 for name in names:
+    print(f"step ({count+1}/{len(names)})\tdrawing {name}... ")
     num = 240 + i
     i += 1
     fig.add_subplot(num)
@@ -32,9 +40,15 @@ for name in names:
         plt.xlabel('threads', fontsize=18)
     if i == 2 or i == 6:
         plt.ylabel('speed up', fontsize=18)
-    if i == 7:
-        plt.legend(fontsize=14)
+    if i == 8:
+        plt.legend(bbox_to_anchor=(1.1,1), fontsize=14)
     count += 1
 
-plt.show()
+#plt.show()
+
+print(f"saving figure to {fig_name}")
+plt.savefig(fig_name)
+print(  "===========================\n"
+        f"Success! Figure saved to {fig_name}!\n"
+        "===========================")
 
