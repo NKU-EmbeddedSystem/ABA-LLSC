@@ -105,3 +105,7 @@ python3 ./draw.py
 
 You should see a figure like this, called `speedup.pdf`:
 ![Speedup](speedup-sample.png)
+
+## Troubleshooting
+
+If you have any problem or suggestion, please feel free to contact us. Eg. troppingz at gmail dot com
