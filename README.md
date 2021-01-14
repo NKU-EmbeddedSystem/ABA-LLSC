@@ -1,4 +1,8 @@
 # Workflow of QEMU-ABA
+
+- **Note1:** This is the code and scripts for paper "Enhancing Atomic Instruction Emulation for Cross-ISA Dynamic Binary Translation" at CGO 2021.
+- **Note2:** This repo is archived for Artifact Evaluation usage so you can not open an issue. Nevertheless, if you have any problem or suggestion, please feel free to contact us. Eg. troppingz at gmail dot com
+
 ## Setup environment
 ### Fetch code
 fetch build and experiment scripts
